@@ -22,18 +22,17 @@ export const putDb = async (content) => {
   // open desired object store
   const store = tx.objectStore('jate');
   // request to edit info with put method
-  const request = store.put({id: id, value: content})
+  const request = store.put({id: 1, value: content});
   // confirmation of req
   const result = await request;
   // tell console was success
   console.log('Data saved to the database', result);
-  // if error
-  console.error('putDb not implemented');
+
 };
 
 // TODO: Add logic for a method that gets all the content from the database
 export const getDb = async () => {
-  console.log('GET to the database');
+  console.log('GET all from the database');
   // connect to database
   const contentDb = await openDB('jate', 1);
   // create transaction
@@ -46,8 +45,8 @@ export const getDb = async () => {
   const result = await request;
   // tell console was success
   console.log('Information recieved', result);
-  // if error
-  console.error('getDb not implemented');
+  // return request
+  return result;
 };
 
 initdb();
