@@ -1,5 +1,5 @@
 const { offlineFallback, warmStrategyCache } = require('workbox-recipes');
-const { CacheFirst } = require('workbox-strategies');
+const { CacheFirst, StaleWhileRevalidate } = require('workbox-strategies');
 const { registerRoute } = require('workbox-routing');
 const { CacheableResponsePlugin } = require('workbox-cacheable-response');
 const { ExpirationPlugin } = require('workbox-expiration');
@@ -35,7 +35,7 @@ registerRoute(
     // Name of the cache storage
     cacheName: 'asset-cache',
     plugins: [
-      // cache base of status codes
+      // cache base on status codes
       new CacheableResponsePlugin({
         statuses: [0, 200],
       }),
