@@ -25,10 +25,12 @@ module.exports = () => {
       // service worker stuff
       new InjectManifest({
         swSrc: './src-sw.js',
-        swDest: 'service-worker.js',
+        swDest: 'src-sw.js',
       }),
       // manifest json
       new WebpackPwaManifest({
+        fingerprints: false, //makes it so that is is just manifest.json
+        inject: true,
         name: 'Text Editor',
         short_name: 'Txt Ed',
         description: 'Edit text',
