@@ -1,7 +1,9 @@
 # Text Editor
 
-## Description
+## Description/Link
 Just Another Text Editor is an installable web application that one can edit text without the internet. 
+
+Link to deployed site: https://damp-citadel-07238-8e297a149b66.herokuapp.com/
 
 ## Table of Contents
 - [Installation](#installation)
@@ -17,7 +19,13 @@ For anyone in the top left corner of the app, there is an install button which w
 ## Usage
 The user can create notes or code snippets with or without an internet connection. It will automatically save the changes to the loacl storages and the indexDB. This makes it so that the user can open the web app or the installed app and still have the same infomation. The text will be colored like coding editor so word like new and class will be colored differently. 
 
+web app:
+
 ![web app](./assets/images/screenshot.png)
+
+installed app:
+
+![installed app](./assets/images/screenshot2.png)
 
 ## Contributing
 Author: Xandromus from the Rice Coding Bootcamp
